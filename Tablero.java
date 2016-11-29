@@ -9,6 +9,9 @@ package hundirlaflota;
  *
  * @author kfelsner
  */
-public class Tauler {
+public class Tablero {
+
+    //--------Declaraciones--------//
+    private int [] [] medidas = new int [10] [10];
     
 }
