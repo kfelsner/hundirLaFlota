@@ -16,5 +16,5 @@ public class Barco {
     private enum barcos {portaaviones, buque, lancha};
     private boolean hundido = false;
     private int [] [] posicionesOcupadas;
-    private boolean [] [] posicionesFerides;
+    private boolean [] [] posicionesHeridas;
  }
