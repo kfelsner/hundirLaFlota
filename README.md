@@ -1,1 +1,1 @@
-Texto de presentación, pendiente de modificar.
+Este repositorio alberga todo el código del juego de "Hundir la Flota". 
