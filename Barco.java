@@ -15,6 +15,13 @@ public class Barco {
     private int medida;
     private enum barcos {portaaviones, buque, lancha};
     private boolean hundido = false;
-    private int [] [] posicionesOcupadas;
+    private int [] [] posicionesOcupadas = new int [0][0];
     private boolean [] [] posicionesHeridas;
+    
+    //--------Metodos--------//
+    void MakeShip(Barco.barcos tipo){
+        if (tipo.equals("portaaviones")){
+            
+        }
+    }
  }
