@@ -12,6 +12,18 @@ package hundirlaflota;
 public class Tablero {
 
     //--------Declaraciones--------//
-    private int [] [] medidas = new int [10] [10];
+    private int [][] medidas = new int [10][10];
+    private int [] barcos;
     
+    //--------Metodos--------//
+    void Show(){
+        for (int i = 0; i < 10; i++){
+            for (int j = 0; j < 10; j++){
+                medidas[i][j]=0;
+
+                System.out.print( (medidas [i] [j]) + " " );
+            }
+        System.out.println();
+        }
+    }
 }
