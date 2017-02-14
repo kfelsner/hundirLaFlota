@@ -18,9 +18,10 @@ public class Pruebas {
         
         //--------Zona de Pruebas--------//
         Tablero tabla = new Tablero();
-        Barco lancha = new Barco();
-        tabla.Show();
-        
+        Barco prueba = new Barco(Barco.barcos.buque);
+        tabla.crearTablero();
+        prueba.colocarBarcos();
+        tabla.mostrarTablero();
     }
     
 }
