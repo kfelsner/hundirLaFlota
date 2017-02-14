@@ -7,33 +7,26 @@ package hundirlaflota;
 public class Tablero {
 
     //--------Declaraciones--------//
-    private int [][] medidas = new int [10][10];
-    Barco [] nBarcos = new Barco [0];
-    
+    public static Casillas[][] tabla = new Casillas[10][10];
+    Barco[] nBarcos = new Barco[0];
+
     //--------Metodos--------//
-    
+    // ==== WORK IN PROGRESS ==== //
     /*----Crear tabla----*/
-    public void MakeTable(){
-        for (int i = 0; i < 10; i++){
-            for (int j = 0; j < 10; j++){
-                
-                medidas[i][j]=0;
+    public void crearTablero() {
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 10; y++) {
+                tabla[x][y] = new Casillas();
             }
         }
     }
-    
-    public void ShowTable(){
-        for (int i = 0; i < 10; i++){
-            for (int j = 0; j < 10; j++){
-                System.out.print(medidas[i][j] + " ");
+
+    public void mostrarTablero() {
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 10; y++) {
+                System.out.print(tabla[x][y].forma + " ");
             }
-        System.out.println();
+            System.out.println();
         }
     }
-    
-    /*----Generacion de Barcos----*/
-    public void ShipGeneration(){
-        
-    }
-    
 }
