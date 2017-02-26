@@ -8,58 +8,52 @@ public class Barco {
 
     //--------Declaraciones--------//
     private int medida;
-    enum barcos {portaaviones, buque, lancha};
+
+    enum barcos {
+        portaaviones, buque, lancha
+    };
     private boolean hundido = false;
     private int[][] posicionesOcupadas;
     private boolean[][] posicionesHeridas;
+    private int direccion;
 
     //--------Metodos--------//
-    
     // ==== WORK IN PROGRESS ==== //
-    
     //Constructor
-    public Barco (barcos tipo) {
-        if (tipo.equals("portaaviones")) {
-            medida = 5;
-            posicionesOcupadas = new int[medida][2];
-        }
-        if (tipo.equals("buque")) {
-            medida = 3;
-            posicionesOcupadas = new int[medida][2];
-        }
-        if (tipo.equals("lancha")) {
-            medida = 2;
-            posicionesOcupadas = new int[medida][2];
-        }
-    }
-    
-    //Colocar barco en el tablero.
-    public void colocarBarcos(){
-        
-        int x = (int) (Math.random() * 10);
-        int y = (int) (Math.random() * 10);
-        
-        for (int k = 0; k < 1; k++) {
-            if (!Tablero.tabla[x][y].contenido) {
-                Tablero.tabla[x][y].forma = '*';
-                Tablero.tabla[x][y].contenido = true;
-            }
+    public Barco(barcos tipo) {
+        switch (tipo) {
+            case portaaviones:
+                medida = 5;
+                posicionesOcupadas = new int[medida][2];
+                break;
+            case buque:
+                medida = 3;
+                posicionesOcupadas = new int[medida][2];
+            case lancha:
+                medida = 1;
+                posicionesOcupadas = new int[medida][2];
         }
     }
+
     
+
+    //Cambia el booleano hundido a true.
     public void hundido() {
         hundido = true;
     }
-    
-    public void herido(int x, int y){
+
+    //Hiere una posición del barco.
+    public void herido(int x, int y) {
         posicionesHeridas[x][y] = true;
     }
-    
+
+    //Metodo que elige la dirección: horizontal o vertical, del barco.
+    public void direccion() {
+        direccion = (int) (Math.random() % 2);
+    }
+
 }
-    
-    
-    
-    
+
 //    public void ponerBarco(Barco.barcos tipo, int x, int y, String orientacion) {
 //        if (tipo.equals(barcos.portaaviones)) {
 //            medida = 5;
